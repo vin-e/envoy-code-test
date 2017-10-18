@@ -1,0 +1,80 @@
+html, body, p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 0; }
+
+.envoy-font-chilipepper {
+  color: #e34e33; }
+
+.envoy-font-blue {
+  color: #67d9da; }
+
+.envoy-font-lightgrey {
+  color: #9f9f9f; }
+
+.envoy-font-mediumgrey {
+  color: #282828; }
+
+.envoy-background-chilipepper {
+  background-color: #e34e33;
+  color: #fff; }
+
+.grid-thirds {
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100% + 40px); }
+  .grid-thirds::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.grid-thirds__single-column {
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px; }
+  @media (min-width: 1000px) {
+    .grid-thirds__single-column {
+      width: calc(33.33333% - 26.66667px);
+      float: left;
+      margin-left: 20px; } }
+
+.content-container {
+  background-color: #1d1d1d;
+  color: #fff;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  text-align: center; }
+  .content-container a {
+    color: #e34e33;
+    text-decoration: none; }
+    .content-container a:hover {
+      color: #67d9da; }
+  .content-container .content {
+    margin: 0 auto;
+    text-align: left;
+    width: 940px; }
+    .content-container .content .headline {
+      border-bottom: 5px solid #282828;
+      color: #fff;
+      padding-bottom: 40px; }
+    .content-container .content .headline-text {
+      font-size: 37px;
+      line-height: 33px; }
+    .content-container .content a.headline-text {
+      color: #fff;
+      font-size: 35px; }
+      .content-container .content a.headline-text:hover {
+        color: #67d9da; }
+    .content-container .content .small-text {
+      font-size: 13px; }
+    .content-container .content .date-padding {
+      padding: 10px 0 6px 0; }
+    .content-container .content .subheadline {
+      color: #9f9f9f;
+      border-bottom: 1px solid #282828;
+      font-size: 22px;
+      margin-bottom: 20px;
+      padding: 70px 0 20px 0; }
+      .content-container .content .subheadline a {
+        font-size: 13px;
+        padding-left: 6px; }

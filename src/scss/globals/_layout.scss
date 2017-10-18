@@ -1,0 +1,22 @@
+$grid-thirds: (
+    columns: 1
+);
+
+$grid-thirds--tablet-up: (
+    columns: 3,
+    gutter: 20px,
+    media: "(min-width: 1000px)"
+);
+
+.grid-thirds {
+    @include grid-container;
+    @include grid-collapse;
+}
+
+.grid-thirds__single-column {
+    @include grid-column(1, $grid-thirds);
+
+    @include grid-media($grid-thirds--tablet-up) {
+        @include grid-column(1);
+    }
+}

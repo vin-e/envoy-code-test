@@ -1,0 +1,15 @@
+// Bourbon / Neat framework imports
+@import "bourbon";
+@import "neat";
+
+// resets
+@import "globals/resets";
+
+// defaults
+@import "globals/colors";
+
+// layout
+@import "globals/layout";
+
+// pages
+@import "pages/home";

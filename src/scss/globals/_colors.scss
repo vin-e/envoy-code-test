@@ -1,0 +1,26 @@
+$babyblue: #67d9da;
+$chilipepper: #e34e33;
+$lightgrey: #9f9f9f;
+$grey: #1d1d1d;
+$mediumgrey: #282828;
+$white: #fff;
+
+.envoy-font-chilipepper {
+    color: $chilipepper;
+}
+
+.envoy-font-blue {
+    color: $babyblue;
+}
+
+.envoy-font-lightgrey {
+    color: $lightgrey;
+}
+.envoy-font-mediumgrey {
+    color: $mediumgrey;
+}
+
+.envoy-background-chilipepper {
+    background-color: $chilipepper;
+    color: $white;
+}

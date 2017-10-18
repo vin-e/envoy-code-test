@@ -1,0 +1,71 @@
+
+// container for content section
+.content-container {
+    background-color: $grey;
+    color: $white;
+    padding-bottom: 60px; // just adding spacing to bottom of page.
+    padding-top: 60px;
+    text-align: center;
+
+    // global font styling. overwritten in various locations
+    a {
+        color: $chilipepper;
+        text-decoration: none;
+
+        &:hover {
+            color: $babyblue;
+        }
+    }
+
+    // content section
+    .content {
+        margin: 0 auto;
+        text-align: left;
+        width: 940px;
+
+        // large headline
+        .headline {
+            border-bottom: 5px solid $mediumgrey;
+            color: $white;
+            padding-bottom: 40px;
+        }
+
+        // headline font styling
+        .headline-text {
+            font-size: 37px;
+            line-height: 33px;
+        }
+
+        // color for link with headline text
+        a.headline-text {
+            color: $white;
+            font-size: 35px; // overwriten size to match psd
+            &:hover {
+                color: $babyblue;
+            }
+        }
+
+        // small text used in various locations
+        .small-text {
+            font-size: 13px;
+        }
+
+        .date-padding {
+            padding: 10px 0 6px 0;
+        }
+
+        // section headlines
+        .subheadline {
+            color: $lightgrey;
+            border-bottom: 1px solid $mediumgrey;
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding: 70px 0 20px 0;
+
+            a {
+                font-size: 13px;
+                padding-left: 6px;
+            }
+        }
+    }
+}
