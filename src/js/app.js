@@ -19,7 +19,7 @@ new Vue({
     },
     methods: {
         getStyle(item) {
-            var style = `background-image: url(/images/${ item.backgroundImage }); background-repeat: no-repeat;`;
+            var style = `background-image: url(./images/${ item.backgroundImage }); background-repeat: no-repeat;`;
             style += `height: 675px;`;
             
             return style;
