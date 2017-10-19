@@ -19,4 +19,6 @@ $grid-thirds--tablet-up: (
     @include grid-media($grid-thirds--tablet-up) {
         @include grid-column(1);
     }
+
+    margin-bottom: 40px;
 }
