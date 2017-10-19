@@ -1,0 +1,116 @@
+.header {
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    .header__inner {
+        margin: 0 auto;
+        padding: 20px 0 15px 0;
+        position: relative;
+        text-align: left;
+        width: 940px;
+
+        @media (max-width: 939px) {
+            margin: 0 20px;
+            width: auto;
+        }
+
+        .header__logo {
+            svg {
+                display: inline-block;
+                fill: $lightgrey;
+
+                .header__logo-letter {
+                    color: $lightgrey;
+                }
+            }
+        }
+
+        .header__nav {
+            display: inline-block;
+
+            @media (max-width: 939px) {
+                display: none;
+            }
+
+            &-list {
+                list-style: none;
+                margin-bottom: 0;
+                padding-left: 28px;
+
+                &-item {
+                    display: inline-block;
+
+                    &:not(:first-of-type) {
+                        margin-left: 22px;
+                    }
+
+                    a {
+                        color: $white;
+                        font-size: 13px;
+                        font-weight: bold;
+                        text-decoration: none;
+                    }
+
+                    &--hover, &:hover {
+                        a {
+                            color: $chilipepper;
+                        }
+                    }
+
+                    &--selected {
+                        a {
+                            color: $lightgrey;
+                        }
+                    }
+                }
+            }
+        }
+
+        .header__social {
+            bottom: 0;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+
+            @media (max-width: 939px) {
+                display: none;
+            }
+            
+            &-twitter, &-more {
+                display: inline-block;
+                text-decoration: none;
+            }
+
+            &-twitter {
+                background: #464646;
+                color: #67d9da;
+                padding: 7px 13px 9px 13px;
+
+                i {
+                    font-size: 30px;
+                    vertical-align: sub;
+                }
+
+                &:hover {
+                    color: $white;
+                }
+            }
+
+            &-more {
+                background: $chilipepper;
+                color: $white;
+                margin-left: -5px;
+                padding: 13px;
+
+                &:hover {
+                    background: $white;
+                    color: $chilipepper;
+                }
+            }
+        }
+    }
+}

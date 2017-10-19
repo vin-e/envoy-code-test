@@ -1,6 +1,6 @@
 
 // container for content section
-.content-container {
+.content {
     background-color: $grey;
     color: $white;
     padding-bottom: 60px; // just adding spacing to bottom of page.
@@ -18,7 +18,7 @@
     }
 
     // content section
-    .content {
+    &__inner {
         margin: 0 auto;
         text-align: left;
         width: 940px;
@@ -30,7 +30,7 @@
 
 
         // large headline
-        .headline {
+        .content__headline {
             border-bottom: 5px solid $mediumgrey;
             color: $white;
             padding-bottom: 40px;
@@ -57,6 +57,10 @@
         }
 
         .work {
+            &-headline {
+                margin-bottom: 10px;
+            }
+
             img {
                 width: 100%;
             }
@@ -71,7 +75,7 @@
         }
 
         // section headlines
-        .subheadline {
+        .content__subheadline {
             color: $lightgrey;
             border-bottom: 1px solid $mediumgrey;
             font-size: 22px;

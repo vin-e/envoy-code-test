@@ -1,0 +1,113 @@
+.slideshow {
+    height: 675px;
+    .slider {
+        &__item {
+            background-size: cover;
+            background-position-x: -65px;
+            margin: 0 auto;
+            text-align: center;
+
+            .slider__content {
+                margin: 0 auto;
+                position: relative;
+                text-align: left;
+                width: 940px;
+
+                &--inner {
+                    left: 0;
+                    position: absolute;
+                    top: 140px;
+                    width: 350px;
+                }
+
+                .django {
+                    top: 200px;
+                    width: 350px;
+
+                    .slider__content-headline {
+                        color: #d90e0a;
+                    }
+
+                    .slider__content-text {
+                        a {
+                            color: #d90e0a;
+                        }
+                    }
+                }
+
+                .vizio {
+                    left: initial;
+                    right: 60px;
+                    width: 400px;
+
+                    .slider__content-headline {
+                        color: #d90e0a;
+                    }
+
+                    .slider__content-text {
+                        a {
+                            color: #d90e0a;
+                        }
+                    }
+                }
+
+                .escape {
+                    width: 430px;
+
+                    .slider__content-headline {
+                        color: #f68f1e;
+                    }
+
+                    .slider__content-text {
+                        color: $white;
+
+                        a {
+                            color: #f68f1e;
+                        }
+                    }
+                }
+
+                .utlra {
+                    width: 455px;
+
+                    .slider__content-headline {
+                        color: #2162bc;
+                    }
+
+                    .slider__content-text {
+                        width: 400px;
+
+                        a {
+                            color: #2162bc;
+                        }
+                    }
+                }
+
+                &-headline {
+                    font-family: 'TradeGothicBoldCondensed', Helvetica, sans-serif;
+                    font-size: 62px;
+                    line-height: 55px;
+                    text-transform: uppercase;
+                }
+
+                &-text {
+                    color: $lightgrey;
+                    font-size: 16px;
+                    padding-top: 10px;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .slider-indicator-icon {
+            background-color: $lightgrey;
+
+            &.slider-indicator-active {
+                background-color: $chilipepper;
+            }
+        }
+    }
+}

@@ -20,5 +20,7 @@ $grid-thirds--tablet-up: (
         @include grid-column(1);
     }
 
-    margin-bottom: 40px;
+    @media (max-width: 939px) {
+        margin-bottom: 40px;
+    }
 }
