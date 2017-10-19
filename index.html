@@ -70,7 +70,7 @@
         </header>
         <section class="slideshow">
             <div id="slideshow">
-                <slider animation="fade" :auto="false" :height="getHeight">
+                <slider animation="fade" :height="getHeight">
                     <p style="line-height: 280px; font-size: 5rem; text-align: center;" v-if="!items.length">Loading...</p>
                     <slider-item v-for="(i, index) in items" :key="index">
                         <div class="slider__item" :style="getStyle(i)">
