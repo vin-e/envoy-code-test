@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Vincent Chavez">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Envoy Front End Developer Test</title>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__inner">
+                <a class="header__logo" href="/">
+                    <svg width="90px" height="27px" viewBox="0 0 90 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="header__logo-svg">
+                        <defs>
+                            <polygon id="envoy-logo-path-1" points="16.4473 0.613 0.9933 0.613 0.9933 26.9994 16.4473 26.9994 16.4473 0.613"></polygon>
+                        </defs>
+                    
+                        <g stroke-width="1" fill-rule="evenodd">
+                            <g>
+                                <polygon class="header__logo-letter" points="84.5997 1.0004 81.9897 8.3624 79.3097 1.0004 74.0047 1.0004 79.5267 16.1634 79.5267 27.3874 84.5187 27.3874 84.5187 16.1524 89.8887 1.0004"></polygon>
+                    
+                                <polygon class="header__logo-letter header__logo-letter--e" points="0 1.0139 0 27.3879 13.674 27.3879 13.674 22.4559 4.991 22.4559 4.991 16.6669 10.96 16.6669 10.96 11.7349 4.991 11.7349 4.991 5.9459 13.674 5.9459 13.674 1.0139"></polygon>
+                    
+                                <polygon class="header__logo-letter" points="28.7721 1.013 28.7721 14.13 23.4731 1.013 18.4631 1.013 18.4631 27.387 23.4561 27.387 23.4561 14.272 28.7541 27.387 33.7641 27.387 33.7641 1.013"></polygon>
+                                <g transform="translate(37.000000, 0.387500)">
+                                    <path class="header__logo-letter" d="M26.9531,26.9996 C22.7341,26.9996 19.3031,23.6086 19.3031,19.4406 L19.3031,8.1846 C19.3031,4.0166 22.7341,0.6256 26.9531,0.6256 C31.1711,0.6256 34.6031,4.0166 34.6031,8.1846 L34.6031,19.4406 C34.6031,23.6086 31.1711,26.9996 26.9531,26.9996 M26.9531,5.5586 C25.4871,5.5586 24.2941,6.7356 24.2941,8.1846 L24.2941,19.4406 C24.2941,20.8906 25.4871,22.0676 26.9531,22.0676 C28.4191,22.0676 29.6111,20.8906 29.6111,19.4406 L29.6111,8.1846 C29.6111,6.7356 28.4191,5.5586 26.9531,5.5586" id="Fill-4"></path>
+                                    <g id="envoy-logo-Group-8">
+                                        <polygon class="header__logo-letter" mask="url(#envoy-logo-mask-2)" points="11.3633 0.6124 8.7193 14.1384 6.0773 0.6124 0.9933 0.6124 6.1373 26.9994 11.3033 26.9994 16.4473 0.6124"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-list-item">
+                            <a href="#">Work</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a href="#">Services</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a href="#">Ventures</a>
+                        </li>
+                        <li class="header__nav-list-item header__nav-list-item--selected">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="header__nav-list-item header__nav-list-item--hover">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li class="header__nav-list-item">
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__social">
+                    <a href="#" class="header__social-twitter">
+                        <i class="fa fa-twitter"></i>
+                        <span>Tweet. Tweet.</span>
+                    </a>
+                    <a href="#" class="header__social-more">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section class="slideshow">
+            <div id="slideshow">
+                <slider animation="fade" :auto="false" :height="getHeight">
+                    <p style="line-height: 280px; font-size: 5rem; text-align: center;" v-if="!items.length">Loading...</p>
+                    <slider-item v-for="(i, index) in items" :key="index">
+                        <div class="slider__item" :style="getStyle(i)">
+                            <div class="slider__content">
+                                <div class="slider__content--inner" :class="i.name">
+                                    <div class="slider__content-headline">{{ i.headline }}</div>
+                                    <div class="slider__content-text">{{ i.text }} <a class="slider__content-link" href="#">View Project</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </slider-item>
+                </slider>
+            </div>
+        </section>
+        <section class="content">
+            <div class="content__inner">
+                <div class="content__headline">
+                    An independent full service creative agency helping brave brands build businesses and be heard in a world full of noise. <span class="envoy-font-chilipepper">We are Envoy.</span>
+                </div>
+                
+                <div class="content__subheadline">
+                    Featured Work <a href="#">View All Work</a>
+                </div>
+                <div class="work grid-thirds">
+                    <div class="grid-thirds__single-column">
+                        <img src="images/boost-mobile.jpg" alt="Boost Mobile Rebrand" />
+                        <p class="work-headline">Boost Mobile <span class="envoy-font-blue">Rebrand</span></p>
+                        <p class="work-content small-text envoy-font-lightgrey">Boost Mobile recognized the need to elevate and refresh its brand to speak to a broader audience. The result was an evolved logo, &hellip;</p>
+                        <a href="#" class="small-text">View Project</a>
+                    </div>
+                    <div class="grid-thirds__single-column">
+                        <img src="images/pear-sports.jpg" alt="Pear Sports Training Portal" />
+                        <p class="work-headline">Pear Sports <span class="envoy-font-blue">Training Portal</span></p>
+                        <p class="work-content small-text envoy-font-lightgrey">Pear Sports revolutionary training systems and fitness apps were getting lost in a crowded marketplace. Envoy rebuilt the story and &hellip;</p>
+                        <a href="#" class="small-text">View Project</a>
+                    </div>
+                    <div class="grid-thirds__single-column">
+                        <img src="images/ultimate-training-experience.jpg" alt="Ultimate Training Experience" />
+                        <p class="work-headline">5.11 <span class="envoy-font-blue">Ultimate Training Experience</span></p>
+                        <p class="work-content small-text envoy-font-lightgrey">5.11, the industry leader in tactical gear turned to Envoy to bring their “Ultimate Training Challenge” to life in the digital space &hellip;</p>
+                        <a href="#" class="small-text">View Project</a>
+                    </div>
+                </div>
+
+                <div class="content__subheadline">
+                    Wire <a href="#">View All News</a>
+                </div>
+                <div class="grid-thirds">
+                    <div class="grid-thirds__single-column">
+                        <a href="#" class="headline-text">The Weinstein Co Lets Envoy Loose on Sin City 2</a>
+                        <p class="envoy-font-lightgrey small-text date-padding">May 1, 2013</p>
+                        <a href="#" class="small-text">Read More</a>
+                    </div>
+                    <div class="grid-thirds__single-column">
+                        <a href="#" class="headline-text">5.11 Taps Envoy as New Digital Agency</a>
+                        <p class="envoy-font-lightgrey small-text date-padding">May 1, 2013</p>
+                        <a href="#" class="small-text">Read More</a>
+                    </div>
+                    <div class="grid-thirds__single-column">
+                        <a href="#" class="headline-text">Pear Breaks Ground on Ground Breaking App</a>
+                        <p class="envoy-font-lightgrey small-text date-padding">May 1, 2013</p>
+                        <a href="#" class="small-text">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://use.fontawesome.com/7fb156db37.js"></script>
+    </body>
+</html>
